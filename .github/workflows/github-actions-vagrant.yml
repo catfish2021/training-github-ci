@@ -23,5 +23,8 @@ jobs:
       - name: Wakeup vagrant
         run: vagrant up
       
-      - run: pwd
-      - run: ls -la
+      - run: |
+        pwd
+        
+      - run: |
+        ls -la
