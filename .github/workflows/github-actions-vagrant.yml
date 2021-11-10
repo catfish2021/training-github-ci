@@ -28,23 +28,10 @@ jobs:
       - name: テストpwd 
         run: |
           pwd
-
       - name: テストls-la
         run: |
           ls -la
-      - name: テストls-la ../
-        run: |
-          ls -la ../
-      - name: テストls-la ../../
-        run: |
-          ls -la ../../
-      - name: テストls-la ../../../
-        run: |
-          ls -la ../../../
-      - name: テストls-la ../../../../
-        run: |
-          ls -la ../../../../
-      - name: テストls-la /src/
-        run: |
-          ls -la /src/
+
+      - name: vagrantウェークアップ
+        run: vagrant up
 
