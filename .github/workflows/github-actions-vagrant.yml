@@ -6,7 +6,9 @@ jobs:
     steps:
       - name: Check vagrant
         run: apt list virtualbox -a
-      - name: Install vagrant
+      - name: Download vagrant
         run: curl -O https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.deb
+      - name: Install vagrant
         run: sudo apt install ./vagrant_2.2.7_x86_64.deb
+      - name: Check vagrant version
         run: vagrant --version
