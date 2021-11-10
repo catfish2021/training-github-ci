@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Check out repository
+        run: actions/checkout@v2
+
       - name: Update package
         run: sudo apt update
 
