@@ -39,3 +39,10 @@ jobs:
       - name: テストls-la ../../../
         run: |
           ls -la ../../../
+      - name: テストls-la ../../../../
+        run: |
+          ls -la ../../../../
+      - name: テストls-la /src/
+        run: |
+          ls -la /src/
+
