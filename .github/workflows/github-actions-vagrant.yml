@@ -4,18 +4,21 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check vagrant
+
+      - name: Update package
+        run: sudo apt update
+
+      - name: Check Virtualbox
         run: apt list virtualbox -a
+      - name: Install Virtualbox
+        run: sudo apt install virtualbox
+
       - name: Download vagrant
         run: curl -O https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.deb
       - name: Install vagrant
         run: sudo apt install ./vagrant_2.2.7_x86_64.deb
       - name: Check vagrant version
         run: vagrant --version
-      - name: Test
-        run: 
-          echo test#1
-          echo test#2
-          echo test#3
-          echo test#4
-          
+
+      - name: Wakeup vagrant
+        run: vagrant up
