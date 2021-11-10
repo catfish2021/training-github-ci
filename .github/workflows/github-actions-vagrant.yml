@@ -20,8 +20,8 @@ jobs:
       - name: Check vagrant version
         run: vagrant --version
 
-      - name: Wakeup vagrant
-        run: vagrant up
+      # - name: Wakeup vagrant
+      # run: vagrant up
       
       - name: テストpwd 
         run: |
